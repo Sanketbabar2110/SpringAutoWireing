@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+           
+    <bean id="eng1" class="com.prowings.by_xml.Engine">
+    	<property name="cc" value="3200"/>
+    	<property name="type" value="Desial"/>
+    </bean>
+    
+    <bean id="eng2" class="com.prowings.by_xml.Engine">
+    	<property name="cc" value="3200"/>
+    	<property name="type" value="Desial"/>
+    </bean>
+    
+    <bean id="car" class="com.prowings.by_xml.Car" autowire="byName">
+    	<property name="model" value="2015"/>
+    	<property name="company" value="TATA"/>
+    </bean>
+
+	<!-- In xml configuration id of dependent bean and field/property of dependent class
+	must be same -->    
+</beans>
+           
+           
+           
